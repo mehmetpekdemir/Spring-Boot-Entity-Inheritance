@@ -1,6 +1,6 @@
 package com.mehmetpekdemir.backend;
 
-import com.mehmetpekdemir.backend.entity.Laptop;
+import com.mehmetpekdemir.backend.entity.LaptopEntity;
 import com.mehmetpekdemir.backend.repository.LaptopRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -25,18 +25,19 @@ public class BackendApplication {
     @Bean
     CommandLineRunner createInitialData(LaptopRepository laptopRepository) {
         return (args) -> {
-            Laptop laptop = new Laptop();
+            LaptopEntity laptop = new LaptopEntity();
 
             laptop.setBarcode("L1234");
             laptop.setItemName("Laptop");
             laptop.setBrand("Macbook Pro");
             laptop.setPrice(BigDecimal.valueOf(1200));
+            laptop.setDescription("Test Description");
 
             laptop.setOperatingSystem("Mac OS");
             laptop.setCpuManufacturer("intel i7 7700hq");
             laptop.setGraphicCard("4GB Nvidia 1050 ti");
-            laptop.setMemorySize("16GB");
-            laptop.setHardDiskSize("1TB SSD");
+            laptop.setMemory("16GB");
+            laptop.setHardDisk("1TB SSD");
             laptop.setScreenDisplaySize("15.9 inches");
 
             laptopRepository.save(laptop);

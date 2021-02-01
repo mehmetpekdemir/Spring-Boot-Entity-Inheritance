@@ -1,6 +1,6 @@
 package com.mehmetpekdemir.backend.repository;
 
-import com.mehmetpekdemir.backend.entity.BaseItem;
+import com.mehmetpekdemir.backend.common.entity.BaseItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
