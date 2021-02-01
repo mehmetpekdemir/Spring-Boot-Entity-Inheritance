@@ -1,4 +1,4 @@
-package com.mehmetpekdemir.backend.entity;
+package com.mehmetpekdemir.backend.common.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class AbstractBaseEntity {
+abstract class AbstractBaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

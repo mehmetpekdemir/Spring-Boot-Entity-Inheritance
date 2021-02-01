@@ -1,4 +1,4 @@
-package com.mehmetpekdemir.backend.entity;
+package com.mehmetpekdemir.backend.common.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -28,5 +28,8 @@ public abstract class BaseItem extends AbstractBaseEntity {
 
     @Column(name = "price", nullable = false)
     private BigDecimal price;
+
+    @Column(name = "description", nullable = false, length = 400)
+    private String description;
 
 }

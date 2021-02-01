@@ -1,5 +1,6 @@
 package com.mehmetpekdemir.backend.entity;
 
+import com.mehmetpekdemir.backend.common.entity.BaseItem;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -15,7 +16,7 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "laptop")
-public class Laptop extends BaseItem {
+public class LaptopEntity extends BaseItem {
 
     @Column(name = "operating_system", nullable = false, length = 100)
     private String operatingSystem;
@@ -26,11 +27,11 @@ public class Laptop extends BaseItem {
     @Column(name = "graphic_card", nullable = false, length = 50)
     private String graphicCard;
 
-    @Column(name = "memory_size", nullable = false, length = 50)
-    private String memorySize;
+    @Column(name = "memory", nullable = false, length = 50)
+    private String memory;
 
-    @Column(name = "hard_disk_size", nullable = false, length = 50)
-    private String hardDiskSize;
+    @Column(name = "hard_disk", nullable = false, length = 50)
+    private String hardDisk;
 
     @Column(name = "screen_display_size", nullable = false, length = 50)
     private String screenDisplaySize;
